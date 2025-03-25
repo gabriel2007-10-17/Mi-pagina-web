@@ -22,7 +22,7 @@ Este sitio web es una fusión entre la mitología nórdica clásica y el univers
 ## Autor
 
 - **Autor**: Gabriel Pedreros (Fenrir CodeX)
-- **Correo electrónico**: [tu correo aquí]
+- **Correo electrónico**: [gabriel.pedreros.b@gmail.com]
 - **GitHub**: [https://github.com/gabriel2007-10-17](https://github.com/gabriel2007-10-17)
   
 ## Versión
