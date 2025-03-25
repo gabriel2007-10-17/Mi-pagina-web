@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora la mitología nórdica a través del universo Marvel, descubriendo a los dioses y héroes como Thor, Loki y Odín, sus poderes, leyendas y batallas.">
+    <meta name="author" content="Fenrir CodeX">
+    <meta name="robots" content="index, follow">
+    <title>La Mitología Nórdica según Marvel</title>
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #121212;
+            --accent-color: #1e1e1e;
+            --highlight-color: #ffcc00;
+            --highlight-dark: #e87d00;
+            --white: #ffffff;
+            --light-gray: #eaeaea;
+            --dark-gray: #333333;
+            --gold: #ffd700;
+            --fire-orange: #ff4500;
+            --blue-accent: #1c6fdb;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            animation: backgroundPulse 5s ease-in-out infinite;
+        }
+
+        header {
+            background: url('https://c4.wallpaperflare.com/wallpaper/712/819/722/thor-ragnarok-odin-sif-heimdall-wallpaper-preview.jpg') center center no-repeat;
+            background-size: cover;
+            color: var(--gold);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 4em;
+            color: var(--white);
+            background: transparent;
+            padding: 10px;
+            border: 4px solid transparent;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        header h1:hover {
+            border-color: var(--highlight-color);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        nav {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        nav a {
+            color: var(--highlight-color);
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--highlight-dark);
+            transform: scale(1.1);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--highlight-dark);
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: var(--accent-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://example.com/fire-smoke.png') center center no-repeat;
+            background-size: cover;
+            opacity: 0.25;
+            animation: flameBackground 1.5s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        img {
+            max-width: 51%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        h2 {
+            color: var(--blue-accent);
+            text-shadow: 0 0 10px var(--blue-accent);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        @keyframes glowingText {
+            0% {
+                text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold), 0 0 30px var(--fire-orange);
+                color: var(--gold);
+            }
+            100% {
+                text-shadow: 0 0 20px var(--fire-orange), 0 0 40px var(--fire-orange), 0 0 60px var(--fire-orange);
+                color: var(--fire-orange);
+            }
+        }
+
+        @keyframes flameBackground {
+            0% { opacity: 0.2; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.2; }
+        }
+
+        @keyframes backgroundPulse {
+            0% { background-color: var(--primary-color); }
+            50% { background-color: #222222; }
+            100% { background-color: var(--primary-color); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                font-size: 1.1em;
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            img {
+                max-width: 90%;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Mitología Nórdica según Marvel</h1>
+    </header>
+    
+    <nav>
+        <a href="#thor">Thor</a>
+        <a href="#loki">Loki</a>
+        <a href="#odin">Odín</a>
+        <a href="#otros">Otros Personajes</a>
+        <a href="#enemigos">Enemigos de Thor</a>
+        <a href="#reinos">Los Nueve Reinos</a>
+    </nav>
+    
+    <section id="thor">
+        <h2>Thor</h2>
+        <img src="img/Thor_in_LoveAndThunder_Poster.webp" alt="Thor, el dios del trueno">
+        <p>Thor es uno de los personajes más poderosos del universo Marvel y uno de los dioses nórdicos más conocidos. Hijo de Odín, es el dios del trueno, la tormenta y la protección de la humanidad. En los cómics y películas, Thor empuña su mítico martillo, Mjolnir, y lucha contra amenazas cósmicas y terrestres.</p>
+    </section>
+    
+    <section id="loki">
+        <h2>Loki</h2>
+        <img src="img/loki_god_of_stories_by_artsywayne_dgg277e-fullview-e1704830999616.webp" alt="Loki, el dios de la travesura">
+        <p>Loki es el dios de la travesura y el caos, hermano adoptivo de Thor. En las películas de Marvel, Loki es un personaje complejo, oscilando entre el villano y el antihéroe. A menudo utiliza su astucia y magia para manipular situaciones en su beneficio, lo que lo convierte en un personaje impredecible.</p>
+    </section>
+    
+    <section id="odin">
+        <h2>Odín</h2>
+        <img src="img/Odinb1.webp" alt="Odín, el padre de todos los dioses">
+        <p>Odín es el padre de Thor y el gobernante de Asgard. En el universo Marvel, Odín es retratado como un líder sabio y justo, aunque también es muy estricto. Es un guerrero formidable y el protector de los Nueve Reinos. Posee grandes poderes, entre ellos la capacidad de ver el futuro y el control sobre la magia antigua.</p>
+    </section>
+    
+    <section id="otros">
+        <h2>Otros Personajes Nórdicos en Marvel</h2>
+        <img src="img/Asgard_in_Thor_(film).png" alt="Otros dioses y seres de Asgard">
+        <p>Además de los tres dioses principales, el universo Marvel presenta una serie de otros personajes basados en la mitología nórdica, como:</p>
+        <ul>
+            <li><strong>Hela:</strong> La diosa de la muerte y hermana de Thor.</li>
+            <li><strong>Valkiria:</strong> Una guerrera asgardiana que lidera a las valquirias.</li>
+            <li><strong>Heimdall:</strong> El guardián del Bifrost, que conecta los diferentes reinos.</li>
+        </ul>
+    </section>
+
+    <section id="enemigos">
+        <h2>Enemigos de Thor</h2>
+        <p>A lo largo de los cómics y películas, Thor ha enfrentado a diversos enemigos poderosos, tales como:</p>
+        <ul>
+            <li><strong>Loki:</strong> Aunque es su hermano adoptivo, Loki es uno de los mayores rivales de Thor, siempre poniendo a prueba su valentía y moralidad.</li>
+            <li><strong>Hela:</strong> Hermana de Thor y diosa de la muerte, quien ha sido una amenaza para Asgard y el propio Thor.</li>
+            <li><strong>El Destructor:</strong> Un gigante de metal creado por los dioses para servir como su guardián y protector, que Thor tuvo que enfrentar en varias ocasiones.</li>
+        </ul>
+    </section>
+
+    <section id="reinos">
+        <h2>Los Nueve Reinos</h2>
+        <p>El universo Marvel se basa en los Nueve Reinos de la mitología nórdica, cada uno con su propia cultura y características:</p>
+        <ul>
+            <li><strong>Asgard:</strong> El reino de los dioses, hogar de Thor y su familia.</li>
+            <li><strong>Midgard:</strong> La Tierra, el hogar de los humanos.</li>
+            <li><strong>Jotunheim:</strong> Tierra de los gigantes de hielo, gobernada por Laufey.</li>
+            <li><strong>Vanaheim:</strong> Hogar de los Vanir, asociados con la fertilidad y la magia.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fenrir CodeX | Diseñado por Fenrir CodeX</p>
+    </footer>
+</body>
+</html>
