@@ -1,3 +1,4 @@
+
 # Mitología Nórdica según Marvel
 
 Este proyecto explora la rica mitología nórdica a través del fascinante universo de Marvel. A través de este sitio web, podrás conocer a los principales dioses y héroes de la mitología nórdica, como **Thor**, **Loki** y **Odín**, y ver cómo Marvel los ha adaptado en sus cómics y películas. Además, se exploran los **enemigos** de estos personajes, los **Nueve Reinos** y otros seres clave de Asgard y más allá.
@@ -17,6 +18,18 @@ Este sitio web es una fusión entre la mitología nórdica clásica y el univers
 - **Odín**: El padre de todos los dioses y gobernante de Asgard.
 - **Los Nueve Reinos**: Un vistazo a los diferentes reinos del cosmos según la mitología nórdica.
 - **Enemigos de Thor**: Personajes como **Hela** y **Loki**, quienes desafían a Thor en su lucha por proteger Asgard.
+
+## Autor
+
+- **Autor**: Gabriel Pedreros (Fenrir CodeX)
+- **Correo electrónico**: [tu correo aquí]
+- **GitHub**: [https://github.com/gabriel2007-10-17](https://github.com/gabriel2007-10-17)
+  
+## Versión
+
+- **Versión**: 1.0.0
+- **Fecha de creación**: Marzo de 2025
+- **Última actualización**: Marzo de 2025
 
 ## Capturas de Pantalla
 
